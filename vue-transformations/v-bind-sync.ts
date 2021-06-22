@@ -56,7 +56,11 @@ function fix(node: Node, source: string): Operation[] {
   const modifiers = keyNode.modifiers
   const bindArgument = OperationUtils.getText(argument, source)
 
-  if (argument !== null && modifiers.length === 1) {
+  if (
+    argument !== null &&
+    modifiers.length === 1 &&
+    modifiers[0].name === 'sync'
+  ) {
     // .sync modifiers in v-bind should be replaced with v-model
     fixOperations.push(
       OperationUtils.replaceText(keyNode, `v-model:${bindArgument}`)
