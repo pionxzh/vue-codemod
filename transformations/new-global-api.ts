@@ -3,6 +3,7 @@ import type { ASTTransformation } from '../src/wrapAstTransformation'
 
 import { transformAST as vueAsNamespaceImport } from './vue-as-namespace-import'
 import { transformAST as importCompositionApiFromVue } from './import-composition-api-from-vue'
+import { transformAST as newComponentApi } from './new-component-api'
 import { transformAST as newVueTocreateApp } from './new-vue-to-create-app'
 import { transformAST as rootPropToUse } from './root-prop-to-use'
 import { transformAST as removeTrivialRoot } from './remove-trivial-root'
@@ -15,6 +16,7 @@ import { transformAST as removeExtraneousImport } from './remove-extraneous-impo
 export const transformAST: ASTTransformation = context => {
   vueAsNamespaceImport(context)
   importCompositionApiFromVue(context)
+  newComponentApi(context)
   newVueTocreateApp(context)
   rootPropToUse(context, { rootPropName: 'store' })
   rootPropToUse(context, { rootPropName: 'router' })
