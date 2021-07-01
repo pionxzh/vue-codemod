@@ -28,7 +28,6 @@ export const transformAST: ASTTransformation = context => {
     if (node.arguments.length === 2) {
       componentArgs = node.arguments
       let componentApi: GlobalApi
-      global.globalApi= []
       if (j.Identifier.check(componentArgs[1])) {
         componentApi = { name: componentArgs[1].name, path: filename }
       } else {

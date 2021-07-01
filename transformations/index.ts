@@ -44,7 +44,6 @@ const transformationMap: {
 }
 
 export const excludedTransformations = [
-  'new-component-api',
   'define-component',
   'new-vue-to-create-app',
   'remove-contextual-h-from-render',

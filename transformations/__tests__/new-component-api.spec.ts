@@ -1,6 +1,8 @@
 import { defineInlineTest } from 'jscodeshift/src/testUtils'
 const transform = require('../new-component-api')
 
+global.globalApi= []
+
 defineInlineTest(
   transform,
   {},
