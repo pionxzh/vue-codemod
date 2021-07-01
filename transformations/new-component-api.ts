@@ -31,7 +31,10 @@ export const transformAST: ASTTransformation = context => {
       if (j.Identifier.check(componentArgs[1])) {
         componentApi = { name: componentArgs[1].name, path: filename }
       } else {
-        componentApi = { name: _.upperFirst(_.camelCase(componentArgs[0].value)), path: filename }
+        componentApi = {
+          name: _.upperFirst(_.camelCase(componentArgs[0].value)),
+          path: filename
+        }
       }
       global.globalApi.push(componentApi)
     }
