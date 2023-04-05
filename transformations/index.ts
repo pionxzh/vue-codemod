@@ -15,6 +15,7 @@ const transformationMap: {
   'vuex-v4': require('./vuex-v4'),
   'define-component': require('./define-component'),
   'new-vue-to-create-app': require('./new-vue-to-create-app'),
+  'script-setup': require('./script-setup'),
   'scoped-slots-to-slots': require('./scoped-slots-to-slots'),
   'new-directive-api': require('./new-directive-api'),
   'remove-vue-set-and-delete': require('./remove-vue-set-and-delete'),

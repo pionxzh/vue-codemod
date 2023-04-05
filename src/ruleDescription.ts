@@ -31,6 +31,10 @@ export let ruleDescription = {
     description:
       'https://v3-migration.vuejs.org/breaking-changes/slots-unification.html#overview'
   },
+  'script-setup': {
+    description:
+      'https://v3.vuejs.org/api/sfc-script-setup.html'
+  },
   'new-directive-api': {
     description:
       'https://v3-migration.vuejs.org/breaking-changes/custom-directives.html#overview'
